@@ -1,0 +1,14 @@
+---
+config:
+  theme: redux-dark
+---
+sequenceDiagram
+    participant browser
+    participant server
+    browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa with <br/> {content: "hi from malaysia 2", date: "2025-10-26T11:59:41.739Z"}
+    activate server
+
+    Note right of browser: Upon form submission, detected by the event handler,<br/>the new note is created,<br/>added to the list, the browser then rerenders the list,<br/>and finally sends a HTTP POST request method to the server from the browser
+
+    server-->>browser: HTTP Response 201 indicating the New Resource (note) is Created Successfully
+    deactivate server
