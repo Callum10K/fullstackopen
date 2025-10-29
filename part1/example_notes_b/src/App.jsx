@@ -68,7 +68,7 @@ const App = () => {
   const fieldName = 'age'
   console.log(object1[fieldName]) // 33 is printed
   
-  // add propeertoes to an object
+  // add properties to an object
   // using dot notation
   object1.address = 'Helsinki'
 
