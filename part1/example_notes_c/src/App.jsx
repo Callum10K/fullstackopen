@@ -2,18 +2,20 @@
 const App = () => {
 
   // object methods and "this"
+  // this is used to refer to the object itself
   const arto = {
     name: 'James',
     age: 35,
     education: 'PhD',
     greet: function(){
-      console.log('this is a test using this keyword ' + this.name) // this is used to refer to the object itself
-    }, // functions can be defined as part of an object
+      console.log('this is a test using this keyword ' + this.name)
+    },
     doAddition: function(a, b){
       console.log(a + b)
-    }
+    },
   }
   arto.greet() // "this is a test using this keyword James" is printed
+  // functions can be defined as part of an object
 
   // methods can be assigned to objects evena after the object is created
   arto.growOlder = function(){ 
@@ -31,7 +33,7 @@ const App = () => {
   arto.greet() // "this is a test using this keyword James" is printed
   
   const referenceToGreet = arto.greet
-  referenceToGreet() // prints "this is a test using this keyword undefined"
+  // referenceToGreet() // prints "this is a test using this keyword undefined" resulting in an error
   // this happens as the method is called through a reference where this will
   // refer to the global object instead of the "arto" object 
 
