@@ -56,6 +56,10 @@ const App = () => {
     }
   }
 
+  // Any class instance is still an Object 
+  // JS defines only a limited set of types which are
+  // Boolean, Null, Undefined, Number, String, Symbol, BigInt, and Object
+
   const adam = new Person('Adam Levine', 29)
   adam.greet()
 
